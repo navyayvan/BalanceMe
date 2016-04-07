@@ -44,7 +44,8 @@ app.get('/', function(req,res) {
 
 app.get('/organizer', function(req,res) {
 	if (req.currentUser) {
-		res.render('organizer');
+		res.render('organizer', {user: req.currentUser});
+
 	} else {
 		req.flash('danger', 'you must be logged in to view this page');
 		res.redirect('/')

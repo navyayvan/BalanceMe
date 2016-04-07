@@ -1,27 +1,33 @@
+
 <div ng-app='balanceMe'>
 	<div ng-controller='IPCtrl' class='box'>
 		<p>Intellectual pursuits </p>
-		Hey {{name}}
+		<%=user.intellectual %>
 	</div>
 
 	<div class='box'>
 		<p>Exercise/Food </p>
+		<%=user.exercise %>
 	</div>
 
 	<div class='box'>	
 		<p>Social Life </p>
+		<%=user.sociallife %>
 	</div>
 
 	<div class='box'>
 		<p>Mental Health </p>
+		<%=user.mentalhealth %>
 	</div class='box'>
 
 	<div class='box'>
 		<p>Work </p>
+		<%= user.work %>
 	</div>
 
 	<div class='box'>
 		<p>Intimacy</p>
+		<%=user.intimacy %>
 	</div>
 
 	<br>
