@@ -34,6 +34,7 @@ router.post('/login', function(req,res) {
 			res.send(err);
 		} else if (user) {
 			req.session.userId = user.id;
+			req.flash('success', 'you logged in beyotch!');
 			res.redirect('/')
 		}
 		else {
@@ -44,6 +45,7 @@ router.post('/login', function(req,res) {
 
 router.get('/logout', function(req,res) {
 	req.session.userId = false;
+	req.flash('danger', 'you logged out beyotch!');
 	res.redirect('/');
 })
 

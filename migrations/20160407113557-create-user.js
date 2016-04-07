@@ -17,6 +17,24 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
+      intellectual: {
+        type: Sequelize.TEXT
+      },
+      sociallife: {
+        type: Sequelize.TEXT
+      },
+      work: {
+        type: Sequelize.TEXT
+      },
+      intimacy: {
+        type: Sequelize.TEXT
+      },
+      exercise: {
+        type: Sequelize.TEXT
+      },
+      mentalhealth: {
+        type: Sequelize.TEXT
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

@@ -6,9 +6,12 @@ var session = require('express-session');
 var flash = require('connect-flash');
 var ejsLayouts= require('express-ejs-layouts');
 
-app.use(express.static(__dirname + '/views'));
+
+app.use(express.static(__dirname + '/public'));
 
 app.set('view engine', 'ejs');
+
+app.use(ejsLayouts);
 
 app.use(bodyParser.urlencoded({extended: false}));
 
@@ -39,9 +42,18 @@ app.get('/', function(req,res) {
 	res.render('index', {alerts: req.flash()});
 });
 
-app.get('/secret', function(req,res) {
+app.get('/organizer', function(req,res) {
 	if (req.currentUser) {
-		res.render('secret');
+		res.render('organizer');
+	} else {
+		req.flash('danger', 'you must be logged in to view this page');
+		res.redirect('/')
+	}
+})
+
+app.get('/form', function(req,res) {
+	if (req.currentUser) {
+		res.render('form');
 	} else {
 		req.flash('danger', 'you must be logged in to view this page');
 		res.redirect('/')
@@ -50,6 +62,7 @@ app.get('/secret', function(req,res) {
 
 app.use('/auth', require('./controllers/auth'));
 
+app.use('/form', require('./controllers/form'));
 
 
 app.listen(3000);

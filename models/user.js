@@ -9,15 +9,24 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       validate: {
-        len: [8,20]
+        len: {
+          args: [8,99],
+          msg: 'Password should be between 8 and 99'
+        }
       }
-    }
+    },
+    intellectual: DataTypes.TEXT,
+    sociallife: DataTypes.TEXT,
+    work: DataTypes.TEXT,
+    intimacy: DataTypes.TEXT,
+    exercise: DataTypes.TEXT,
+    mentalhealth: DataTypes.TEXT
   }, {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
       },
-      authenticate: function(email, password, callback) {
+   authenticate: function(email, password, callback) {
         this.find({
           where: {email: email}
         }).then(function(user) {
