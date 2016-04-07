@@ -1,13 +1,21 @@
+
+
 body {
-	background-color: #FFFFC5;
-	color: #3A2A6F;
+	background-color: #A1C7C4;
+	color: #7D151A;
 	font-family: 'Quicksand', sans-serif;
+}
+
+#title h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 4em;
+  text-align: center
 }
 
 .box {
 	height: 300px;
 	width: 300px;
-	background-color: #FF9F8B;
+	background-color: #699D99;
 	margin: 10px;
 	display: inline-block;
 	font-size: 1.5em;
