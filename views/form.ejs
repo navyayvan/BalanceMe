@@ -1,29 +1,43 @@
-<form action='/form/intellectual' method='POST'>
-	<textarea class='form-control' name='intl'> </textarea>
-	<button type='submit' class='btn btn-primary'> Submit </button>
-</form>
+<div id='form' class=container-fluid>
 
-<form action='/form/sociallife' method='POST'>
-	<textarea class='form-control' name='sl'> </textarea>
-	<button type='submit' class='btn btn-primary'> Submit </button>
-</form>
+	<div class='row'>
+		<p>What are your interests? How do you want to cultivate them? How do you plan on expressing creativity? What are some hobbies you have that are unrelated to work?</p>
+		<form action='/form/intellectual' method='POST'>
+			<textarea class='form-control' name='intl'> </textarea>
+			<button type='submit' class='btn btn-primary'> Submit </button>
+		</form>
 
-<form action='/form/work'  method='POST'>
-	<textarea class='form-control' name='wrk'> </textarea>
-	<button type='submit' class='btn btn-primary'> Submit </button>
-</form>
+		<form action='/form/sociallife' method='POST'>
+			<p> Who are the important people in your life? Who would you like to get to know better? Do you feel you are in touch with the people who matter to you? </p>
+			<textarea class='form-control' name='sl'> </textarea>
+			<button type='submit' class='btn btn-primary'> Submit </button>
+		</form>
 
-<form action='/form/intimacy' method='POST'>
-	<textarea class='form-control' name='intmcy'> </textarea>
-	<button type='submit' class='btn btn-primary'> Submit </button>
-</form>
+		<form action='/form/work'  method='POST'>
+			<p> Do you like where you are at work? How can you move closer to where you want to be? </p> 
+			<textarea class='form-control' name='wrk'> </textarea>
+			<button type='submit' class='btn btn-primary'> Submit </button>
+		</form>
 
-<form action='/form/exercise' method='POST'>
-	<textarea class='form-control' name='ex'> </textarea>
-	<button type='submit' class='btn btn-primary'> Submit </button>
-</form>
+		<form action='/form/intimacy' method='POST'>
+			<p>In your relationship(s) is there room for authenticity, growth, and play? If not, how can you move towards them? </p>
+			<textarea class='form-control' name='intmcy'> </textarea>
+			<button type='submit' class='btn btn-primary'> Submit </button>
+		</form>
 
-<form action='/form/mentalhealth' method='POST'>
-	<textarea class='form-control' name='mh'> </textarea>
-	<button type='submit' class='btn btn-primary'> Submit </button>
-</form>
+		<form action='/form/exercise' method='POST'>
+			<p> How are you going to incorporate physical activity into your life? Is your diet balanced? How are you going to move towards these goals? </p>
+			<textarea class='form-control' name='ex'> </textarea>
+			<button type='submit' class='btn btn-primary'> Submit </button>
+		</form>
+
+		<form action='/form/mentalhealth' method='POST'>
+			<p> Do you have any longstanding issues you feel you need to work on? Do you make time for reflection and healing? </p>
+			<textarea class='form-control' name='mh'> </textarea>
+			<button type='submit' class='btn btn-primary'> Submit </button>
+		</form>
+
+	</div>
+
+</div>
+

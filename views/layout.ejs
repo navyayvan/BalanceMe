@@ -4,6 +4,8 @@
 	<title></title>
 	<!-- Latest compiled and minified CSS & JS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 	<script src="//code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
@@ -32,10 +34,31 @@
 	<% } %>
 <% } %>
  
-	<div class="container">
-	<div> Current User: <%= currentUser.name %></div>
-
 	<%- body %>
+
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand page-scroll" href="#page-top">Balance Me</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class='nav navbar-nav'>
+      <li><a href='/'>Home</a></li>
+      <% if (currentUser) { %>
+      <div class='navbar-text'> Signed in as: <%= currentUser.name %></div>
+      <li><a href='/organizer'>Board</a></li>
+      <li><a href='/form'>Journal</a></li>  
+      <% } else { %>
+      <li><a href='/auth/signup'>Signup</a></li>
+      <li><a href='/auth/login'>Login</a></li>
+      <% } %>     
+    </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 
 
 </body>
